@@ -1,5 +1,9 @@
 package second_tp;
 
+import java.sql.Array;
+import java.util.Arrays;
+
+
 public class second_tp {
     public static void reorder1(int a, int b) {
         if (a > b) {
@@ -149,6 +153,27 @@ public class second_tp {
         System.out.println(count);
     }
 
+    public static void min_max ( int arr []) {
+         int min ;
+         int max ;
+         Arrays.sort(arr);
+         max = arr[0];
+         min = arr[0];
+
+         for (int i=1; i<arr.length;i++){
+             if(min >= arr[i]){
+                 min = arr[i];
+             }
+             if(max<=arr[i]){
+                 max = arr[i];
+             }
+         }
+
+
+         System . out . println (" Minimum value in the array = " + min );
+         System . out . println (" Maximum value in the array = " + max );
+    }
+
     public static void main(String[] args) {
         //System.out.println(signSum(55,-33));
         //System.out.println(signSum(-55,33));
@@ -161,8 +186,10 @@ public class second_tp {
         //primeNumbers(15);
         //test3();
         //exercice3(6);
-        reorder2(55, 33, 98);
-        reorder2(-34, 33, 98);
+        //reorder2(55, 33, 98);
+        //reorder2(-34, 33, 98);
+        int arr [] = {11 ,15 ,6 ,7 ,88 ,9 ,22 ,3 ,48};
+        min_max ( arr );
 
     }
 }
