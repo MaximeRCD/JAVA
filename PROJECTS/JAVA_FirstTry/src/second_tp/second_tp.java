@@ -1,6 +1,5 @@
 package second_tp;
 
-
 public class second_tp {
     public static void reorder1(int a, int b) {
         if (a > b) {
@@ -12,45 +11,24 @@ public class second_tp {
     }
 
     public static void reorder2(int a, int b, int c) {
-        boolean test1 = a > b;
-        boolean test2 = a > c;
-        boolean test3 = b > c;
-
-        if (test1 && test2) {
-            if (test3) {
-                int tmp1 = a;
-                a = c;
-                c = tmp1;
-            } else {
-                int tmp1 = a;
-                a = b;
-                b = c;
-                c = tmp1;
-            }
+        int tmp = 0;
+        boolean test2 = a < c;
+        if (test2) {
+            tmp = a;
+            a = c;
+            c = tmp;
         }
-        if (!test1 && test3) {
-            if (!test2) {
-                int tmp2 = c;
-                c = b;
-                b = tmp2;
-            } else {
-                int tmp2 = a;
-                a = c;
-                c = b;
-                b = tmp2;
-            }
+        boolean test3 = b < c;
+        if (test3) {
+            tmp = b;
+            b = c;
+            c = tmp;
         }
-        else{
-            if (!test2) {
-                int tmp2 = b;
-                b = a;
-                a = tmp2;
-            } else {
-                int tmp2 = a;
-                a = b;
-                b = c;
-                c = tmp2;
-            }
+        boolean test1 = a < b;
+        if (test1) {
+            tmp = a;
+            a = b;
+            b = tmp;
         }
 
 
@@ -127,31 +105,30 @@ public class second_tp {
     }
 
     public static void test1() {
-        for (int i = 0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             i *= 5;
             System.out.println(i);
         }
     }
 
-    public static void test2(int n){
-        for (int i =1; i<n; i*=4){
+    public static void test2(int n) {
+        for (int i = 1; i < n; i *= 4) {
             System.out.println("loop#1");
-            for(int j=1;j<i;j+=4){
+            for (int j = 1; j < i; j += 4) {
                 System.out.println("loop#2");
             }
         }
     }
 
-    public static void primeNumbers(int max){
-        for (int i = 2; i<=max;i++){
-            for (int j =2; j<=i;j++){
-                if (i==j) {
+    public static void primeNumbers(int max) {
+        for (int i = 2; i <= max; i++) {
+            for (int j = 2; j <= i; j++) {
+                if (i == j) {
                     System.out.println(i);
                 }
-                if (i%j != 0){
+                if (i % j != 0) {
                     continue;//ici inutil
-                }
-                else{
+                } else {
                     break;
                 }
 
@@ -159,19 +136,17 @@ public class second_tp {
         }
     }
 
-    public static void test3(){
+    public static void test3() {
         int count = 0;
-        for ( int i = 0; i < 3; i ++)
-            {
-            count ++;
-            for ( int j = 0; j < 3; j ++)
-                {
-                count ++;
+        for (int i = 0; i < 3; i++) {
+            count++;
+            for (int j = 0; j < 3; j++) {
+                count++;
                 //continue; ici inutile
-                 //break ;
-                }
-             }
-         System . out . println ( count );
+                //break ;
+            }
+        }
+        System.out.println(count);
     }
 
     public static void main(String[] args) {
@@ -186,8 +161,8 @@ public class second_tp {
         //primeNumbers(15);
         //test3();
         //exercice3(6);
-        //reorder2(55,33,98);
-        //reorder2(-34,33,98);
+        reorder2(55, 33, 98);
+        reorder2(-34, 33, 98);
 
     }
 }
