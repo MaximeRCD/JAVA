@@ -1,6 +1,5 @@
 package UserInput;
 import java.util.Scanner;
-
 // Scanners can be used to read input from user but also from files
 
 public class User_input {

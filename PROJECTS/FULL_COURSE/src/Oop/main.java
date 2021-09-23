@@ -16,5 +16,8 @@ public class main {
         account.credit(100);
         account.withdraw(12000);
         account.Display();
+
+        Account empty_account = new Account();
+        empty_account.Display();
     }
 }

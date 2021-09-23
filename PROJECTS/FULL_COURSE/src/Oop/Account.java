@@ -15,6 +15,13 @@ public class Account {
         this.type = type;
     }
 
+    public Account(){
+        this.balance=0;
+        this.number=0;
+        this.type=TypeAccount.Current;
+    }
+
+
     public void withdraw(double amount) {
         if (balance > amount) {
             this.balance -= amount;
