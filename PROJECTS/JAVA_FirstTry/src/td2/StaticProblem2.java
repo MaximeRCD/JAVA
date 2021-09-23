@@ -24,3 +24,13 @@ public class StaticProblem2 {
         System.out.println("stp2.myNonStaticAttr="+stp2.myNonStaticAttribute);
     }
 }
+// Question 1 :
+// we will see : 1 1 2 1
+
+// Question 2:
+/*
+stp1.myStaticAttr=1
+stp1.myNonStaticAttr=1
+stp2.myStaticAttr=2
+stp2.myNonStaticAttr=1
+*/
