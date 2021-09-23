@@ -188,8 +188,8 @@ public class second_tp {
         //exercice3(6);
         //reorder2(55, 33, 98);
         //reorder2(-34, 33, 98);
-        int arr [] = {11 ,15 ,6 ,7 ,88 ,9 ,22 ,3 ,48};
-        min_max ( arr );
+        // int arr [] = {11 ,15 ,6 ,7 ,88 ,9 ,22 ,3 ,48};
+        //min_max ( arr );
 
     }
 }
